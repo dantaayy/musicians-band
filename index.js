@@ -1,5 +1,6 @@
 const {Band} = require('./Band')
 const {Musician} = require('./Musician')
+const {Song} = require('./Song')
 
 /**
  * TODO: Create assoications between Musician and Band models
@@ -17,5 +18,6 @@ Band.hasMany(Musician);
 
 module.exports = {
     Band,
-    Musician
+    Musician,
+    Song
 };
