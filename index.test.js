@@ -48,7 +48,7 @@ describe('Band and Musician Models', () => {
         await sequelize.sync({ force: true }); // recreate db
         let BigBang = await Band.create({ name: 'BIGBANG', genre: 'KPOP' }); //create band
         let GD = await Musician.create({ name: 'G-Dragon', instrument: 'Voice' }); //create musician
-        let Top = await Musician.create({ name: 'TOP', instrument: 'Voice' }); //create musician
+        let Top = await Musician.create({ name: 'TOP', instrument: 'Voice' }); //create musician 2
     
         await BigBang.addMusician(GD); //add musician to band
         await BigBang.addMusician(Top); //add musician to band
