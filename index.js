@@ -16,6 +16,10 @@ Musician.belongsTo(Band);
 // one-to-many
 Band.hasMany(Musician);
 
+// Song is many-to-many
+Song.belongsToMany(Band, {through: 'song_tags'})
+Band.belongsToMany(Song, {through: 'song_tags'})
+
 module.exports = {
     Band,
     Musician,

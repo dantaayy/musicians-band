@@ -43,6 +43,14 @@ describe('Band and Musician Models', () => {
             title: 'Green Light',
             year: 2021
         })
+        const createdSong2 = await Song.create({
+            title: 'Good day',
+            year: 1998
+        })
+
+        const band = await Band.findByPk(1);
+        await band.addSong(1);
+        await band.addSong(2);
         expect(createdSong.title).toBe('Green Light')
     })
 
