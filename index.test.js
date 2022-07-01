@@ -66,4 +66,11 @@ describe('Band and Musician Models', () => {
         expect(musicians.length).toBe(2); //we've added two musicians, so the length should be two
         expect(musicians[0] instanceof Musician).toBeTruthy; //checks that the value at index 0 of the list - a musician object, is in fact a musician object
       });
+
+    test('Many to many relationship with songs', async () => {
+        await sequelize.sync({ force: true }); // recreate db
+        let BigBang = await Band.create({ name: 'BIGBANG', genre: 'KPOP' });
+        let GD = await Musician.create({ name: 'G-Dragon', instrument: 'Voice' });
+        let Top = await Musician.create({ name: 'TOP', instrument: 'Voice' });
+    })
 })
