@@ -38,6 +38,13 @@ describe('Band and Musician Models', () => {
         expect(createdMuscician.instrument).toBe('Guitar');
     })
 
+    test('can create a song', async () => {
+        const createdSong = await Song.create({
+            title: 'Green Light',
+            year: 2021
+        })
+    })
+
     /*
      * Optional test to show associations:
         - I've completed this test for you
