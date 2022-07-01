@@ -43,6 +43,7 @@ describe('Band and Musician Models', () => {
             title: 'Green Light',
             year: 2021
         })
+        expect(createdSong.title).toBe('Green Light')
     })
 
     /*
